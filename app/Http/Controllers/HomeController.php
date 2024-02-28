@@ -6,6 +6,11 @@ class HomeController
 {
     public function __invoke()
     {
-        return 5 + [] + '';
+        return '';
+    }
+
+    public function test()
+    {
+        // TODO
     }
 }
