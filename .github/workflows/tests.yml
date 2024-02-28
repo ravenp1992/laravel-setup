@@ -42,7 +42,6 @@ jobs:
       - name: Prepare laravel application
         run: |
           cp .env.ci .env
-          cp .env.ci .env.testing
           php artisan key:generate
 
       - name: Run composer
@@ -56,4 +55,5 @@ jobs:
           DB_CONNECTION: mysql
           DB_PORT: 3306
           DB_USER: root
+          DB_PASSWORD: ""
           DB_DATABASE: cicd_testing
