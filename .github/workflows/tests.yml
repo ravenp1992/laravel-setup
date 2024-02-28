@@ -33,7 +33,7 @@ jobs:
         with:
           path: vendor
           key: composer-${{hashFiles('**/composer.lock')}}
-          restory-keys: |
+          restore-keys: |
             composer-
 
       - name: Setup PHP
@@ -61,6 +61,6 @@ jobs:
         run: |
           ./vendor/bin/phpstan analyse
 
-      - name: Run Pint
+      - name: Run PInt
         run: |
           ./vendor/bin/pint
