@@ -4,9 +4,11 @@ on:
   pull_request:
     branches:
       - main
+      - development
   push:
     branches:
       - main
+      - development
 
 jobs:
   tests:
@@ -54,3 +56,11 @@ jobs:
           php artisan test
         env:
           DB_DATABASE: cicd_testing
+
+      - name: Run Larastan
+        run: |
+          ./vendor/bin/phpstan analyse
+
+      - name: Run Pint
+        run: |
+          ./vendor/bin/pint
