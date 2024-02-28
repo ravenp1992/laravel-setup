@@ -33,6 +33,8 @@ jobs:
         with:
           path: vendor
           key: composer-${{hashFiles('**/composer.lock')}}
+          restory-keys: |
+            composer-
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
